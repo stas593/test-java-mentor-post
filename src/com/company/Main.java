@@ -17,6 +17,9 @@ public class Main {
 			if(!TypeCulc.GetTypeNumber(syms[0]).equals(TypeCulc.GetTypeNumber(syms[2]))){
 				throw new Exception("Калькулятор умеет работать только с арабскими или римскими цифрами от 1 до 10(от I до X) одновременно. Примеры ввода: (V + VI), (4 * 8).");
 			}
+			if(TypeCulc.GetTypeNumber(syms[0]).equals("") && TypeCulc.GetTypeNumber(syms[2]).equals("")){
+				throw new Exception("Калькулятор умеет работать только с арабскими или римскими цифрами от 1 до 10(от I до X) одновременно. Примеры ввода: (V + VI), (4 * 8).");
+			}
 			if(!syms[1].equals("+") && !syms[1].equals("-") && !syms[1].equals("*") && !syms[1].equals("/")){
 				throw new Exception("Введена недопустимая арифметическая операция. Допускаются следующие операции: +, -, *, /. Примеры ввода: (V + VI), (4 * 8).");
 			}
