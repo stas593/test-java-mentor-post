@@ -15,11 +15,7 @@ public class Main {
 				throw new Exception("Неверный формат ввода. Допустимый формат ввода: [Операнд][Пробел][Оператор][Пробел][Операнд]. Примеры ввода: (V + VI), (4 * 8).");
 			}
 			if(!TypeCulc.GetTypeNumber(syms[0]).equals(TypeCulc.GetTypeNumber(syms[2]))){
-				throw new Exception("Калькулятор умеет работать только с арабскими или римскими цифрами одновременно. Примеры ввода: (V + VI), (4 * 8).");
-			}
-			if(!TypeCulc.GetTypeNumber(syms[0]).equals("arab") && !TypeCulc.GetTypeNumber(syms[0]).equals("rome") &&
-					!TypeCulc.GetTypeNumber(syms[2]).equals("arab") && !TypeCulc.GetTypeNumber(syms[2]).equals("rome")){
-				throw new Exception("Введены неверные значения. Допускаются значения арабских от 1 до 10 и римских от I до X чисел. Примеры ввода: (V + VI), (4 * 8).");
+				throw new Exception("Калькулятор умеет работать только с арабскими или римскими цифрами от 1 до 10(от I до X) одновременно. Примеры ввода: (V + VI), (4 * 8).");
 			}
 			if(!syms[1].equals("+") && !syms[1].equals("-") && !syms[1].equals("*") && !syms[1].equals("/")){
 				throw new Exception("Введена недопустимая арифметическая операция. Допускаются следующие операции: +, -, *, /. Примеры ввода: (V + VI), (4 * 8).");
